@@ -113,7 +113,7 @@ public class LinkList implements MyList {
         StringBuffer sb = new StringBuffer();
         sb.append("[");
         Node node = head.getNext();
-        if (node==null)
+        if (node == null)
             return null;
         while (node != null) {
             sb.append(node.getData().toString() + ", ");
