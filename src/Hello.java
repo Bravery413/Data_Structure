@@ -1,9 +1,7 @@
-import linearList.LinkList;
-import linearList.SqList;
+import keyword.A;
 
 public class Hello {
     public static void main(String[] args) throws Exception {
-        A a = new A(10);
-        System.out.println(a.i);
-    }
+
+}
 }

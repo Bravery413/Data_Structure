@@ -1,3 +1,5 @@
+package keyword;
+
 public class A {
 // this关键字主要有三个应用：
 //     (1)this调用本类中的属性，也就是类中的成员变量；
