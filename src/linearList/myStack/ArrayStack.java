@@ -1,15 +1,15 @@
 package linearList.myStack;
 
-public class Stack<E> {
+public class ArrayStack<E> {
     private Object[] data = null;
     private int maxSize = 0;
     private int top = -1;
 
-    public Stack() {
+    public ArrayStack() {
         this(10);
     }
 
-    public Stack(int initialSize) {
+    public ArrayStack(int initialSize) {
         if (initialSize >= 0) {
             this.maxSize = initialSize;
             data = new Object[initialSize];
@@ -19,6 +19,10 @@ public class Stack<E> {
 
     public boolean isEmpty() {
         return top == -1 ? true : false;
+    }
+
+    public int length(){
+        return top+1;
     }
 
 
@@ -47,6 +51,7 @@ public class Stack<E> {
     }
 
     public int search(E e) throws Exception {
+        // 1.将top值保存,遍历数组,如果有返回,如果没有,返回-1
         int i = top;
         while (top != -1) {
             if (peek() != e) {
@@ -55,7 +60,7 @@ public class Stack<E> {
                 break;
             }
         }
-        int result = top + 1;
+        int result = top;
         top = i;//返回值去
         return result;
     }
