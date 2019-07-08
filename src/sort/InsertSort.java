@@ -42,17 +42,36 @@ public class InsertSort {
         }
         return nums;
     }
+
     /**
      * 希尔排序
      */
-    //TODO
 
-
-
+    public static int[] shellSort(int[] nums) {
+        int i, j;
+        int length = nums.length;
+        int increment = nums.length;
+        do {
+            //增量
+            increment = increment / 3 + 1;
+            for (i = increment + 1; i < length; i++) {
+                if (nums[i] < nums[i - increment]) {
+                    nums[0] = nums[i];
+                    for (j = i - increment; j > 0 && nums[0] < nums[j]; j -= increment) {
+                        nums[j + increment] = nums[j];
+                    }
+                    nums[j + increment] = nums[0];
+                }
+            }
+        }
+        while (increment > 1);
+        return nums;
+    }
     public static void main(String[] args) {
-//        int[] nums = new int[]{0, 62, 88, 58, 47, 35, 51, 73, 99, 37, 93};
-        int[] nums = new int[]{0, 5, 3, 4, 6, 2};
-        int[] result = straightInsertSort(nums);
+        int[] nums = new int[]{0, 9, 1, 5, 8, 3, 7, 4, 6, 2, };
+//        int[] nums = new int[]{0, 62, 88, 58, 47, 35, 51, 73, 99, 37, 93,101,3};
+//        int[] nums = new int[]{0, 5, 3, 4, 6, 2};
+        int[] result = shellSort(nums);
         String string = Arrays.toString(result);
         System.out.println(string);
     }
