@@ -39,7 +39,9 @@ public class Solution4 {
     }
 
     public static void main(String[] args) {
-        int[] nums1 = new int[]{1, 5, 9, 13};
+//        int[] nums1 = new int[]{1, 5, 9, 13};
+//        int[] nums2 = new int[]{2, 4, 7, 18,22};
+        int[] nums1 = new int[]{1, 5};
         int[] nums2 = new int[]{2, 4, 7, 18,22};
         System.out.println(findMedianSortedArrays(nums1, nums2));
     }
