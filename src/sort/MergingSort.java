@@ -2,6 +2,9 @@ package sort;
 
 import java.util.Arrays;
 
+/**
+ * 归并排序,没懂
+ */
 public class MergingSort {
     public static int MAXSIZE = 20;
 
