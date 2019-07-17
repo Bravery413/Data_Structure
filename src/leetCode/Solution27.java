@@ -14,38 +14,40 @@ import java.util.regex.Pattern;
 class Solution27 {
     //暴力.时间太长,不能通过
     public static int removeElement0(int[] nums, int val) {
-        for (int i=0;i<nums.length-1;i++){
-            if (nums[i]==val){
-               for (int j=i;j<nums.length-1;j++){
-                   nums[j]=nums[j+1];
-               }
-               i--;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == val) {
+                for (int j = i; j < nums.length - 1; j++) {
+                    nums[j] = nums[j + 1];
+                }
+                i--;
             }
 
         }
-        for (int i=0;i<nums.length;i++){
+        for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i]);
         }
         return nums.length;
     }
+
     //思路:当遍历到需去除元素时,与最后一个调换位置,并且还需检验调换过来的元素,最后数组长度-1
     public static int removeElement(int[] nums, int val) {
-        int n=nums.length;
-        int i=0;
-        while (i<n) {
-            if (nums[i]==val){
-                nums[i]=nums[n-1];
+        int n = nums.length;
+        int i = 0;
+        while (i < n) {
+            if (nums[i] == val) {
+                nums[i] = nums[n - 1];
                 n--;
-            }else {
+            } else {
                 i++;
             }
         }
         return n;
     }
+
     public static void main(String[] args) {
 //        int[] nums = new int[]{0, 0, 1, 1, 1, 2, 3, 3, 5, 7};
         int[] nums = new int[]{3};
-        System.out.println(removeElement(nums,3));
+        System.out.println(removeElement(nums, 3));
     }
 /**
  * 总结
