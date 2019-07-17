@@ -1,7 +1,5 @@
 package leetCode;
 
-import org.omg.PortableInterceptor.INACTIVE;
-import sun.management.snmp.jvminstr.JvmThreadInstanceEntryImpl;
 
 import java.util.HashMap;
 import java.util.Stack;
@@ -14,14 +12,14 @@ import java.util.Stack;
  * 注意空字符串可被认为是有效字符串。
  */
 public class Solution20 {
-    private HashMap<Character, Character> mappings;
-
-    public Solution20() {
-        this.mappings = new HashMap<Character, Character>();
-        this.mappings.put(')', '(');
-        this.mappings.put('}', '{');
-        this.mappings.put(']', '[');
-    }
+//    private HashMap<Character, Character> mappings;
+//
+//    public Solution20() {
+//        this.mappings = new HashMap<Character, Character>();
+//        this.mappings.put(')', '(');
+//        this.mappings.put('}', '{');
+//        this.mappings.put(']', '[');
+//    }
 
     public static boolean isValid(String s) {
         HashMap<Character, Character> mappings = new HashMap<>();
@@ -39,7 +37,7 @@ public class Solution20 {
                 if (topElement != mappings.get(c)) {
                     return false;
                 }
-                //左括号
+                //左括号进栈
             } else {
                 stack.push(c);
             }
