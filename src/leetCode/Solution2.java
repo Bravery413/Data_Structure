@@ -20,16 +20,16 @@ public class Solution2 {
         ListNode listNode = new ListNode(0);
         ListNode pre = listNode;
         while (l1 != null && l2 != null) {
-            int value=l1.val + l2.val;
-            if (value>=10){
-                pre.val=value%10;
-
-            }else {
-                pre.val = l1.val + l2.val;
+            pre.next = new ListNode(0);
+            int value = l1.val + l2.val;
+            if (value >= 10) {
+                pre.next.val = value % 10;
+                pre.val++;
+            } else {
+                pre.next.val = l1.val + l2.val;
             }
             l1 = l1.next;
             l2 = l2.next;
-            pre.next = new ListNode(0);
             pre = pre.next;
         }
         return listNode.next;
@@ -47,7 +47,7 @@ public class Solution2 {
         l2.next = new ListNode(6);
         l2.next.next = new ListNode(4);
         ListNode listNode = addTwoNumbers(l1, l2);
-        while (listNode.next != null) {
+        while (listNode != null) {
             System.out.println(listNode.val);
             listNode = listNode.next;
         }
