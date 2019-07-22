@@ -1,6 +1,5 @@
 package linearList.myStack;
 
-import sun.invoke.empty.Empty;
 
 public class LinkStack<E> {
     private Node<E> top;
@@ -12,12 +11,10 @@ public class LinkStack<E> {
 
     public int length() {
         return size;
-
     }
 
     public boolean isEmpty() {
         return size == 0;
-//        return top==null?true:false;
     }
 
 
