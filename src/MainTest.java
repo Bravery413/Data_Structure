@@ -27,15 +27,8 @@ public class MainTest {
     }
 
     public static void main(String[] args) throws Exception {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        List<Integer> subList = list.subList(0,2);
-        subList.add(4);
-        list.add(0);
-        System.out.println(list);
-        System.out.println(subList);
+
+        System.out.println(String.format("%8f",(double)1/(double)3));
 
 
 //
