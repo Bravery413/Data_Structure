@@ -7,6 +7,7 @@ import javax.jws.soap.SOAPBinding;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Stack;
 
 public class MainTest {
     public static void method(String param) {
@@ -27,33 +28,18 @@ public class MainTest {
     }
 
     public static void main(String[] args) throws Exception {
-
-        System.out.println(String.format("%8f",(double)1/(double)3));
-
-
-//
-//        Integer a = 20;
-//        Integer b = 20;
-//        Integer c = 256;
-//        Integer d = 256;
-//        System.out.println(a == b);
-//        System.out.println(c == d);
-
-//        LinkQuene<Object> quene = new LinkQuene<>();
-//        for (int i = 0; i < 10; i++) {
-//            quene.add(i);
-//        }
-//        System.out.println(quene.toString());
-//        System.out.println(quene.isEmpty());
-//        System.out.println(quene.peek());
-//        System.out.println(quene.length());
-//
-//        for (int i = 0; i < 10; i++) {
-//            Node<Object> node = quene.poll();
-//            Object o=node.e;
-//            System.out.print(o.toString() + " ");
-//        }
-
-
+        int test=159;
+        Stack<Integer> stack = new Stack<>();
+        while (true){
+            if (test/10==0){
+                stack.push(test);
+                break;
+            }
+            stack.push(test%8);
+            test=test/8;
+        }
+        for (Integer m:stack){
+            System.out.println(m);
+        }
     }
 }
