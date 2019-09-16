@@ -1,25 +1,36 @@
-import java.util.HashMap;
-
-/**
- * @author: Bravery
- * @create: 2019-08-22 16:02
- **/
-
-
-public class Main {
-    public static void main(String[] args){
-        String str="MPMPCPMCM DEFEGDE HINHKLIN";
-        HashMap<Character, Integer> map = new HashMap<>();
-        for(int i=0;i<str.length();i++){
-            char c=str.charAt(i);
-            if (!map.containsKey(c)){
-                map.put(c,i);
-                for (int j=str.length()-1;j>=i;j--){
-                    if (map.containsKey(c)){
-
-                    }
-                }
-            }
-        }
-    }
-}
+//import java.io.*;
+//import java.util.*;
+//import java.text.*;
+//import java.math.*;
+//import java.util.regex.*;
+//
+//public class Main {
+//
+///** 请完成下面这个函数，实现题目要求的功能 **/
+//    /**
+//     * 当然，你也可以不按照这个模板来作答，完全按照自己的想法来 ^-^
+//     **/
+//    static String getIndexAndLongest(String users) {
+//        char[] chars = users.toCharArray();
+//        for (int i = 0; i < chars.length; i++) {
+//            for
+//
+//        }
+//
+//    }
+//
+//    public static void main(String[] args) {
+//        Scanner in = new Scanner(System.in);
+//        String res;
+//
+//        String users;
+//        try {
+//            users = in.nextLine();
+//        } catch (Exception e) {
+//            users = null;
+//        }
+//
+//        res = getIndexAndLongest(users);
+//        System.out.println(res);
+//    }
+//}

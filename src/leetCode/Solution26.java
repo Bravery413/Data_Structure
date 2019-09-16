@@ -1,6 +1,7 @@
 package leetCode;
 
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -37,6 +38,8 @@ class Solution26 {
                 nums[j] = nums[i];
             }
         }
+        HashMap map=new HashMap<Integer,Integer>();
+
         return j + 1;
     }
 
