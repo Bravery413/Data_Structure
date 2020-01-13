@@ -16,5 +16,9 @@ public class Children extends Father {
     public Children(int i,int j){
         System.out.println("孩子的2参构造");
     }
+    @Override
+    public void method()throws NullPointerException {
+        System.out.println(222);
+    }
 
 }
