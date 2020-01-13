@@ -32,11 +32,11 @@ public class Solution66 {
 
 
 
-    public static void main(String[] args) {
-        int[] q = {1, 2, 3};
-        int[] ints = plusOne(q);
-        System.out.println(ints.toString());
-
-    }
+//    public static void main(String[] args) {
+//        int[] q = {1, 2, 3};
+//        int[] ints = plusOne(q);
+//        System.out.println(ints.toString());
+//
+//    }
 
 }

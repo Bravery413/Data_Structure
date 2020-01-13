@@ -79,13 +79,13 @@ public class Solution599 {
         return resList.toArray(new String[resList.size()]);
     }
 
-    public static void main(String[] args) {
-        String[] list1 = {"Shogun", "Tapioca Express", "Burger King", "KFC"};
-        String[] list2 = {"Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"};
-        String[] restaurant = findRestaurant(list1, list2);
-        System.out.println(restaurant.toString());
-
-    }
+//    public static void main(String[] args) {
+//        String[] list1 = {"Shogun", "Tapioca Express", "Burger King", "KFC"};
+//        String[] list2 = {"Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"};
+//        String[] restaurant = findRestaurant(list1, list2);
+//        System.out.println(restaurant.toString());
+//
+//    }
 
 
 }
