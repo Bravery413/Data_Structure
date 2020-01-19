@@ -65,7 +65,12 @@ public class Question17 {
         return found;
     }
 
+    /**
+     * 可以通过行列指针的操作二维数组
+     * 不一定是双层for循环
+     */
     public static void main(String[] args) {
+
         int[][] array = {{1, 2, 3, 9}, {2, 3, 4, 11}, {3, 5, 10, 13}, {4, 8, 12, 20}};
         boolean res = Find(15, array);
         System.out.println(res);
