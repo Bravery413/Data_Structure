@@ -3,14 +3,22 @@ package offer;
 import java.util.*;
 
 public class Test {
-    public static void print(TreeNode root) {
+    public static void printTree(TreeNode root) {
         if (root == null) {
             return;
         }
-        print(root.left);
+        printTree(root.left);
         System.out.println(root.val);
-        print(root.right);
+        printTree(root.right);
     }
+
+    public static void printListNode(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val);
+            head = head.next;
+        }
+    }
+
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(8);
@@ -20,20 +28,33 @@ public class Test {
         root.left.right = new TreeNode(7);
         root.right.left = new TreeNode(9);
         root.right.right = new TreeNode(11);
+        ListNode node = new ListNode(1);
+        node.next = new ListNode(2);
+        ListNode loop = new ListNode(3);
+        node.next.next = loop;
+        node.next.next.next = new ListNode(3);
+        node.next.next.next.next = new ListNode(4);
+        node.next.next.next.next.next = new ListNode(4);
+        node.next.next.next.next.next.next = new ListNode(5);
+        printListNode(node);
+        System.out.println();
+        Question49 question49 = new Question49();
+        ListNode res = question49.deleteDuplication(node);
+        printListNode(res);
 
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(
-                new Comparator<Integer>() { //大顶堆，容量11
-                    @Override
-                    public int compare(Integer i1, Integer i2) {
-                        return i2 - i1;
-                    }
-                });
-        maxHeap.add(1);
-        maxHeap.add(3);
-        maxHeap.add(2);
-        System.out.println(maxHeap.poll());
-        System.out.println(maxHeap.poll());
-        System.out.println(maxHeap.poll());
+
+//        Question48 question48 = new Question48();
+//        System.out.println(question48.EntryNodeOfLoop(node).val);
+
+
+//        Question47 question47 = new Question47();
+//        question47.Insert(1);
+//        question47.Insert(3);
+//        question47.Insert(2);
+//        question47.Insert(4);
+//        question47.Insert(6);
+//        question47.Insert(5);
+//        System.out.println(question47.GetMedian());
 
 
 //        Question46 question46 = new Question46();
