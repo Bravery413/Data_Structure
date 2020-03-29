@@ -39,8 +39,8 @@ public class Test {
         printListNode(node);
         System.out.println();
         Question49 question49 = new Question49();
-        ListNode res = question49.deleteDuplication(node);
-        printListNode(res);
+//        ListNode res = question49.deleteDuplication(node);
+//        printListNode(res);
 
 
 //        Question48 question48 = new Question48();
