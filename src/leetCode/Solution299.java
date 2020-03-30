@@ -2,20 +2,27 @@ package leetCode;
 
 public class Solution299 {
     public static String getHint(String secret, String guess) {
-        Integer A = 0;
-        Integer B = 0;
+        int A = 0;
+        int[] bucket = new int[10];
         for (int i = 0; i < secret.length(); i++) {
-            for (int j = 0; j < secret.length(); j++) {
-                if(i==j&&secret.charAt(i) == guess.charAt(j)){
-                    A++;
-                } else if (secret.charAt(i) == guess.charAt(j))
-                    B++;
+            if (secret.charAt(i) == guess.charAt(i)) {
+                A++;
+            } else {
+                bucket[secret.charAt(i)-'0'] += 1;
+                bucket[guess.charAt(i)-'0'] -= 1;
             }
         }
-        return A.toString() + "A" + B.toString() + "B";
+        int count = 0;
+        for (int i=0;i<10;i++) {
+            if (bucket[i] > 0) {
+                count+=bucket[i];
+            }
+        }
+        int B = secret.length() - count - A;
+        return A + "A" + B + "B";
     }
 
     public static void main(String[] args) {
-        System.out.println(getHint("1807","7810"));
+        System.out.println(getHint("1122", "3456"));
     }
 }
