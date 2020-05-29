@@ -5,10 +5,6 @@ public class MyThread extends Thread {
 
     @Override
     public synchronized void run() {
-        super.run();
-        while (count>0){
-            count--;
-            System.out.println(Thread.currentThread().getName()+"计算结果="+count);
-        }
+        System.out.println("run->"+this.isAlive());
     }
 }
