@@ -2,18 +2,13 @@ package threadPractice;
 
 public class Run {
     public static void main(String[] args) {
-       try{
-           MyThread thread = new MyThread();
-           thread.setName("myThread");
-           thread.start();
-           for (int i = 0; i < 10; i++) {
-               int time=(int)(Math.random()*1000);
-               Thread.sleep(time);
-               System.out.println("main"+Thread.currentThread().getName());
-           }
+        MyThread thread = new MyThread();
+        Thread A = new Thread(thread, "A");
+        Thread B = new Thread(thread, "B");
+        Thread C = new Thread(thread, "C");
+        A.start();
+        B.start();
+        C.start();
 
-       }catch (InterruptedException e){
-           e.printStackTrace();
-       }
     }
 }

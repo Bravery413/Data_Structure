@@ -1,16 +1,14 @@
 package threadPractice;
 
 public class MyThread extends Thread {
+    private int count=5;
+
     @Override
-    public void run() {
-        try {
-            for (int i = 0; i < 10; i++) {
-                int time = (int) (Math.random() * 1000);
-                Thread.sleep(time);
-                System.out.println("run=" + Thread.currentThread().getName());
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    public synchronized void run() {
+        super.run();
+        while (count>0){
+            count--;
+            System.out.println(Thread.currentThread().getName()+"计算结果="+count);
         }
     }
 }
