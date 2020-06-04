@@ -75,6 +75,8 @@ public class Solution0603 {
         for (int i=K-1;i>=0;i--){
             dp[i]=sum/W;
             sum=dp[i]+sum-dp[i+W];
+            //会快1ms
+            //sum = sum - dp[i + W] + dp[i];
         }
         return dp[0];
     }
