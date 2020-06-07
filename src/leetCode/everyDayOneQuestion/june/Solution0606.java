@@ -1,4 +1,4 @@
-package leetCode.everyDayOneQuestion;
+package leetCode.everyDayOneQuestion.june;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

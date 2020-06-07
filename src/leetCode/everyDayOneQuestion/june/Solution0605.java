@@ -1,4 +1,4 @@
-package leetCode.everyDayOneQuestion;
+package leetCode.everyDayOneQuestion.june;
 
 public class Solution0605 {
     public int[] spiralOrder(int[][] matrix) {

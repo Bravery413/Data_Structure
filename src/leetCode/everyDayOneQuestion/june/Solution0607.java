@@ -1,4 +1,4 @@
-package leetCode.everyDayOneQuestion;
+package leetCode.everyDayOneQuestion.june;
 
 /**
  * 困难,放弃

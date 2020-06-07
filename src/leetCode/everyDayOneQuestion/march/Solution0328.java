@@ -1,4 +1,4 @@
-package leetCode.everyDayOneQuestion;
+package leetCode.everyDayOneQuestion.march;
 
 import java.util.Arrays;
 

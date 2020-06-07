@@ -1,4 +1,4 @@
-package leetCode.everyDayOneQuestion;
+package leetCode.everyDayOneQuestion.june;
 
 public class Solution0602 {
     public static int sumNums(int n) {
