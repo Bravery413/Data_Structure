@@ -61,7 +61,7 @@ public class Solution0302 {
      * 递归
      * @param args
      */
-    public ListNode reverseList(ListNode head) {
+    public static ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) return head;
         ListNode p = reverseList(head.next);
         head.next.next = head;
