@@ -4,6 +4,8 @@ target/
 */.classpath
 */.project
 .classpath
+.class
+*/.class
 .project
 .idea/
 .svn/
