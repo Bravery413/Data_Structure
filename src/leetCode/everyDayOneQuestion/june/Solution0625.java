@@ -13,12 +13,15 @@ import java.util.List;
 
 public class Solution0625 {
     public static boolean wordBreak(String s, List<String> wordDict) {
-        HashSet<String> set = new HashSet<>(wordDict);
+        HashSet<String> dictSet = new HashSet<>(wordDict);
+        //动态规划核心,保留每个子过程的结果,供后面使用
         boolean[] dp = new boolean[s.length() + 1];
+        //让第一位默认true
         dp[0] = true;
         for (int i = 1; i <= s.length(); i++) {
             for (int j = 0; j < i; j++) {
-                if (dp[j] && set.contains(s.substring(j, i))) {
+                //判断当前位必须是true,再做判断
+                if (dp[j] && dictSet.contains(s.substring(j, i))) {
                     dp[i] = true;
                     break;
                 }
@@ -29,6 +32,7 @@ public class Solution0625 {
 
     /**
      * 效率最高,未理解
+     *
      * @param s
      * @param wordDict
      * @return
@@ -41,7 +45,7 @@ public class Solution0625 {
     }
 
     private static boolean wordBreak(String s, int idx, List<String> wordDict, int[] memo) {
-        if (idx >= s.length()){
+        if (idx >= s.length()) {
             return true;
         }
         if (memo[idx] >= 0) {
