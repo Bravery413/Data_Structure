@@ -1,11 +1,9 @@
 package leetcode.everyday.june;
 
+
 /**
  * @author 潘勇
  * @date 2020/6/15 14:02
- */
-
-/**
  * 14. 最长公共前缀
  * 编写一个函数来查找字符串数组中的最长公共前缀。
  * 如果不存在公共前缀，返回空字符串 ""。
@@ -21,9 +19,6 @@ public class Solution0615 {
 
     /**
      * 两两配对,找最长公共前缀
-     *
-     * @param strs
-     * @return
      */
     public static String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0 || strs[0].length() == 0) {
@@ -40,7 +35,7 @@ public class Solution0615 {
     }
 
     private static String getSameIndex(String s1, String s2) {
-        int len = s1.length() < s2.length() ? s1.length() : s2.length();
+        int len = Math.min(s1.length(), s2.length());
         StringBuilder res = new StringBuilder();
         for (int i = 0; i < len; i++) {
             if (s1.charAt(i) != s2.charAt(i)) {
@@ -55,9 +50,6 @@ public class Solution0615 {
      * 调用找子串的方法 str1.indexOf(str);
      * flower.indexOf(fl)->0
      * flower.indexOf(ow)->2*
-     *
-     * @param strs
-     * @return
      */
     public static String longestCommonPrefix1(String[] strs) {
         if (strs.length == 0) {

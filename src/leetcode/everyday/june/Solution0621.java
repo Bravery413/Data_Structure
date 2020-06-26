@@ -1,11 +1,9 @@
 package leetcode.everyday.june;
 
+
 /**
  * @author 潘勇
  * @date 2020/6/21 16:29
- */
-
-/**
  * 二叉树中的最大路径和
  * 给定一个非空二叉树，返回其最大路径和。
  *
@@ -26,8 +24,6 @@ public class Solution0621 {
 
     /**
      * 递归解决
-     * @param root
-     * @return
      */
     public static int maxPathSum(TreeNode root) {
         helper(root);

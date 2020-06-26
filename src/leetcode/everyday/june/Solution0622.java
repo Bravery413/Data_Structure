@@ -32,9 +32,6 @@ import java.util.HashMap;
 public class Solution0622 {
     /**
      * 直接的方法行不通
-     * @param pattern
-     * @param value
-     * @return
      */
     public static boolean patternMatching0(String pattern, String value) {
         int patLen = pattern.length();
@@ -59,7 +56,7 @@ public class Solution0622 {
             return false;
         }
         int len = valLen / patLen;
-        HashMap<Character, String> map = new HashMap<>();
+        HashMap<Character, String> map = new HashMap<>(10);
         for (int i = 0, j = 0; i < patLen; i++) {
             char c = pattern.charAt(i);
             if (map.containsKey(c)) {

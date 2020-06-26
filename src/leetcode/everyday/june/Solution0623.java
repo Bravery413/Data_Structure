@@ -1,6 +1,7 @@
 package leetcode.everyday.june;
 
 import java.math.BigInteger;
+import java.util.Arrays;
 
 /**
  * 二进制求和:
@@ -63,17 +64,11 @@ public class Solution0623 {
         int len = Math.max(a.length(), b.length());
         //将两个字符串转换为等长的
         char[] s1 = new char[len];
-        for (int i = 0; i < s1.length; i++) {
-            s1[i] = '0';
-        }
+        Arrays.fill(s1, '0');
         char[] s2 = new char[len];
-        for (int i = 0; i < s2.length; i++) {
-            s2[i] = '0';
-        }
+        Arrays.fill(s2, '0');
         char[] s3 = new char[len + 1];
-        for (int i = 0; i < s3.length; i++) {
-            s3[i] = '0';
-        }
+        Arrays.fill(s3, '0');
         int j = s1.length - 1;
         for (int i = a.length() - 1; i >= 0; i--) {
             s1[j] = a.charAt(i);
