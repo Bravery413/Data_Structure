@@ -26,9 +26,17 @@ import java.util.List;
  * 输入: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
  * 输出: false
  */
-
-
 public class Solution0625 {
+    /**
+     * 动态规划: 每个操作保存子过程结果供后面使用
+     * 步骤:
+     * 1.第一层遍历取全部
+     * 2.第二层查有无,有则dp[i]置true
+     * 注: dp长度+1,并且dp[0]置true 比如1.flag字典刚好完整的flag2.每次判断第一个字符都需要dp[0]
+     * @param s 待拆分字符
+     * @param wordDict 单词字典
+     * @return 是否可完整拆分
+     */
     public static boolean wordBreak(String s, List<String> wordDict) {
         HashSet<String> dictSet = new HashSet<>(wordDict);
         //动态规划核心,保留每个子过程的结果,供后面使用
@@ -50,15 +58,14 @@ public class Solution0625 {
     /**
      * 效率最高,未理解
      *
-     * @param s
-     * @param wordDict
-     * @return
+     * @param s 待拆分字符
+     * @param wordDict 单词字典
+     * @return 是否可完整拆分
      */
     public static boolean wordBreak1(String s, List<String> wordDict) {
         int[] memo = new int[s.length()];
         Arrays.fill(memo, -1);
-        boolean res = wordBreak(s, 0, wordDict, memo);
-        return res;
+        return wordBreak(s, 0, wordDict, memo);
     }
 
     private static boolean wordBreak(String s, int idx, List<String> wordDict, int[] memo) {
