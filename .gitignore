@@ -6,6 +6,7 @@ target/
 .classpath
 .class
 */.class
+*.class
 .project
 .idea/
 .svn/

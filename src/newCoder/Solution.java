@@ -1,6 +1,6 @@
 package newCoder;
 
-import leetCode.ListNode;
+import leetcode.ListNode;
 
 /**
  * @author: Bravery
