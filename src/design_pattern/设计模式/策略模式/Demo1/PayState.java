@@ -17,7 +17,7 @@ public class PayState {
         this.msg=msg;
     }
 
-    @Override
+
     public String toString() {
         return "PayState{" +
                 "code=" + code +
