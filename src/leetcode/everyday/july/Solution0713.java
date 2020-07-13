@@ -38,6 +38,7 @@ public class Solution0713 {
      * 使用HashMap 记录长的数组出现的数及其次数
      * 遍历短的,找对应,如果找到,hashMap的值-1
      * 这里的ArrayList可以使用index和 Arrays.copyOfRange(res, 0, index) 代替
+     * 并且这里使用短的去做HashMap会优化效率
      * <p>
      * 还可以使用排序+双指针解决
      * 排序,相等则记录,两个指针都往后移动
