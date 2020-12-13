@@ -10,10 +10,10 @@ import java.util.Random;
 
 
 public class SortUtil {
-    public static void main(String[] args) {
-        int[] qus = getRandom(100, 100);
+    public static void main(String[] args) throws Exception {
+//        int[] qus = getRandom(10, 100);
+        int[] qus={86, 1, 12, 42, 58, 71};
         BubleSort.bubleSort(qus);
-        System.out.println(Arrays.toString(qus));
         System.out.println(isSort(qus));
     }
 
