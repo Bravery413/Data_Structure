@@ -10,7 +10,7 @@ import java.util.HashMap;
 /**
  * 290. 单词规律
  */
-public class Solution1206 {
+public class Solution1216 {
     public static void main(String[] args) {
         System.out.println(wordPattern("abba", "dog cat cat fish"));
     }

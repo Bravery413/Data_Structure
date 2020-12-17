@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * 49. 字母异位词分组
  */
-public class Sulution1214 {
+public class Solution1214 {
 
 
     /**
