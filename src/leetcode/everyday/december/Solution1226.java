@@ -1,6 +1,7 @@
 package leetcode.everyday.december;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -20,8 +21,18 @@ public class Solution1226 {
         List<Integer> intList = new ArrayList(strList);
         System.out.println(intList);
         //打印报错：无法转型 java.lang.String cannot be cast to java.lang.Integer
-        for (int i:intList){
-            System.out.println(i);
+//        for (int i:intList){
+//            System.out.println(i);
+//        }
+        System.out.println("----");
+        Iterator<String> itr = strList.iterator();
+        while (itr.hasNext()){
+            String next = itr.next();
+            System.out.println(next);
+            if (next.equals("1")){
+                itr.remove();
+            }
         }
+        System.out.println(strList);
     }
 }
