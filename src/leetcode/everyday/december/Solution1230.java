@@ -1,6 +1,9 @@
 package leetcode.everyday.december;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.PriorityQueue;
+import java.util.stream.Collectors;
 
 /**
  * @author 潘勇
@@ -10,9 +13,14 @@ import java.util.PriorityQueue;
 
 public class Solution1230 {
     public static void main(String[] args) {
-        System.out.println(lastStoneWeight(new int[]{2, 7, 4, 1, 8, 1}));
-        System.out.println(lastStoneWeight(new int[]{1, 3}));
+//        System.out.println(lastStoneWeight(new int[]{2, 7, 4, 1, 8, 1}));
+//        System.out.println(lastStoneWeight(new int[]{1, 3}
+
+        StringBuilder errMsg = new StringBuilder();
+        System.out.println(errMsg.toString().isEmpty());
+
     }
+
 
 
     public static int lastStoneWeight(int[] stones) {
