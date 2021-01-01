@@ -1,6 +1,6 @@
 package utils;
 
-import com.alibaba.fastjson.JSON;
+
 import utils.DTO.*;
 
 import java.time.LocalDate;
@@ -202,7 +202,7 @@ public class Test {
         smartSchedules.add(smartSchedule);
         smartSchedules.add(smartSchedule);
 
-        String json = JSON.toJSONString(smartSchedules);
-        System.out.println(json);
+//        String json = JSON.toJSONString(smartSchedules);
+//        System.out.println(json);
     }
 }
