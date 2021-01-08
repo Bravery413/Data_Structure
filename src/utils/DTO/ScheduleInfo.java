@@ -11,7 +11,7 @@ import java.util.Date;
 
 public class ScheduleInfo {
     private String deptCode;
-    private LocalDateTime createTm;
+    private Date createTm;
     private Date beginTm;
     private Date endTm;
     private double avgSatisfy;
@@ -19,6 +19,15 @@ public class ScheduleInfo {
     private double highestSatisfy;
     private float avgHoliday;
     private double rate;
+    private String processNo;
+
+    public String getProcessNo() {
+        return processNo;
+    }
+
+    public void setProcessNo(String processNo) {
+        this.processNo = processNo;
+    }
 
     public String getDeptCode() {
         return deptCode;
@@ -36,11 +45,11 @@ public class ScheduleInfo {
         this.beginTm = beginTm;
     }
 
-    public LocalDateTime getCreateTm() {
+    public Date getCreateTm() {
         return createTm;
     }
 
-    public void setCreateTm(LocalDateTime createTm) {
+    public void setCreateTm(Date createTm) {
         this.createTm = createTm;
     }
 

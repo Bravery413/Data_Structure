@@ -16,7 +16,6 @@ public class SmartSchedule {
     private ScheduleInfo scheduleInfo;
     private List<EmpSchedule> EmpScheduleList;
     private List<EmpRest> empRestList;
-    private SatisfyRate satisfyRate;
 
 
     public ScheduleInfo getScheduleInfo() {
@@ -43,11 +42,4 @@ public class SmartSchedule {
         this.empRestList = empRestList;
     }
 
-    public SatisfyRate getSatisfyRate() {
-        return satisfyRate;
-    }
-
-    public void setSatisfyRate(SatisfyRate satisfyRate) {
-        this.satisfyRate = satisfyRate;
-    }
 }
