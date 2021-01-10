@@ -2,10 +2,10 @@ package leetcode;
 
 //Definition for singly-linked list.
 public class ListNode {
-    int val;
-    leetcode.ListNode next;
+    public int val;
+    public leetcode.ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
     }
 }
